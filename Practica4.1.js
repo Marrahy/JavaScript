@@ -224,18 +224,70 @@ switch (parseInt(option)) {
          * usuario. El rango puede ser creciente o decreciente, que será solicitado con un "confirm".
          */
 
-        
+        var rangeA = parseInt(prompt("Introduce el primer número: "));
+        var rangeB = parseInt(prompt("Introduce el segundo número: "));
+        var option = confirm("Presiona aceptar si quieres que lo muestre de manera creciente. \n Presiona cancelar si quieres que lo muestre decreciente.");
+        var arrayNum = new Array();
+        var pos = 0;
+
+        switch (option) {
+            case true:
+                for (rangeA; rangeA < rangeB + 1; rangeA++) {
+                    arrayNum[pos] = rangeA;
+                    pos++;
+                }
+                document.writeln(arrayNum);
+            break;
+            case false:
+                for (rangeB; rangeB > rangeA - 1; rangeB--) {
+                    arrayNum[pos] = rangeB;
+                    pos++;
+                }
+                document.writeln(arrayNum);
+            break;
+            default:
+                break;
+        }
 
     break;
     case 11:
         /**
          * Mostrar todos los múltiplos de 5 entre 50 y 100.
          */
+
+        var arrayNum = new Array();
+        var pos = 0;
+
+        for (var i = 50; i < 100 + 1; i++) {
+            if (i % 5 == 0) {
+                arrayNum[pos] = i;
+                pos++;
+            }
+        }
+
+        document.writeln("1," + arrayNum);
+
     break;
     case 12:
         /**
          * Mostrar todos los múltiplos de X entre A y B. Pedir X, A y B al usuario.
          */
+
+        var arrayNum = new Array();
+        var pos = 0;
+        var multX = parseInt(prompt("Introduce el número múltiplo: "));
+        var rangeA = parseInt(prompt("Rango A: "));
+        var rangeB = parseInt(prompt("Rango B: "));
+
+        for (rangeA; rangeA < rangeB + 1; rangeA++) {
+            if (rangeA % multX == 0) {
+                arrayNum[pos] = rangeA;
+                pos++;
+            }
+        }
+
+        document.writeln("1," + arrayNum);
+
     break;
     default:
         break;
