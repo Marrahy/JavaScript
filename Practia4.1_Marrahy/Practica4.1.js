@@ -15,9 +15,9 @@ switch (parseInt(option)) {
         else
             if (num2 > num3)
                 document.write(num2 + " es mayor")
-                else
-                    document.write(num3 + " es mayor")
-    break;
+            else
+                document.write(num3 + " es mayor")
+        break;
     case 2:
         /**
          * Efectuar un algoritmo que averigüe si un número positivo es par o impar. El programa leerá
@@ -30,8 +30,8 @@ switch (parseInt(option)) {
         }
         else
             document.write(" Impar")
-        
-    break;
+
+        break;
     case 3:
         /**
          * Diseñar un algoritmo para sumar los 100 primeros números naturales entre si. Tenga en
@@ -40,10 +40,10 @@ switch (parseInt(option)) {
 
         var res = 0;
         for (var i = 1; i < 101; i++) {
-            res+=i
+            res += i
         }
         document.write(res);
-    break;
+        break;
     case 4:
         /**
          * Diseñar un algoritmo para sumar los 100 números siguientes a un valor entero positivo que
@@ -53,10 +53,10 @@ switch (parseInt(option)) {
 
         var numUsr = parseInt(prompt("Introduce un número: "))
         for (var i = 1; i < 101; i++) {
-            numUsr+=i
+            numUsr += i
         }
         document.write(numUsr);
-    break;
+        break;
     case 5:
         /**
          * Diseñar un algoritmo que lea 3 números enteros positivos distintos e imprima el mayor y el
@@ -98,7 +98,7 @@ switch (parseInt(option)) {
 
         document.writeln("El mayor valor es: " + mayor);
         document.writeln("El menor valor es: " + menor);
-    break;
+        break;
     case 6:
         /**
          * Diseñar un algoritmo para leer una lista de números positivos y escribir, después de leerla, el
@@ -134,7 +134,7 @@ switch (parseInt(option)) {
         document.writeln("Número más grande de la lista: " + maxNum);
         document.writeln("Número más pequeño de la lista: " + minNum);
 
-    break;
+        break;
     case 7:
         /**
          * Diseñar un algoritmo para convertir temperaturas en grados Farenheit a grados Celsius. El
@@ -148,13 +148,13 @@ switch (parseInt(option)) {
 
         do {
             Farenheit = parseInt(prompt("Introduce los grados Farenheit: "));
-            if (Farenheit > 999) {
-                Celsius = ((Farenheit - 32) * 5/9);
+            if (Farenheit < 999) {
+                Celsius = ((Farenheit - 32) * 5 / 9);
                 alert("Grados Celsius: " + Celsius);
             }
         } while (Farenheit != 999);
 
-    break;
+        break;
     case 8:
         /**
          * Pedir al usuario la velocidad media en kilómetros/hora y los segundos invertidos en un
@@ -164,11 +164,11 @@ switch (parseInt(option)) {
         var KmH = parseInt(prompt("Introduce la velocidad media en kilómetros/hora: "))
         var secInv = parseInt(prompt("Segundos a invetir en el trayecto: "))
 
-        var trayecto = (KmH * 10) / 3.6;
+        var trayecto = ((KmH * 1000) * secInv) / 3600;
 
-        document.writeln("Distancia en metros recorridos en " + secInv + "s: " +  trayecto);
+        document.writeln("Distancia en metros recorridos en " + secInv + "s: " + trayecto);
 
-    break;
+        break;
     case 9:
         /**
          * Hacer una conversor de moneda, pidiendo en primer lugar al usuario la moneda de inicio, la
@@ -190,34 +190,34 @@ switch (parseInt(option)) {
         switch (startUpCurrency) {
             case 1:
                 if (currency == 2) {
-                    document.writeln("Cantidad en €: " + quantity * 0.91);
+                    document.writeln("Cantidad en €: " + quantity / 1.11); //Dolar --> Euro
                 }
                 if (currency == 3) {
-                    document.writeln("Cantidad en £: " + quantity * 0.81);
-                }        
-            break;
+                    document.writeln("Cantidad en £: " + quantity * 0.76); //Dolar --> Libra
+                }
+                break;
             case 2:
                 if (currency == 1) {
-                    document.writeln("Cantidad en $: " + quantity * 1.10);
+                    document.writeln("Cantidad en $: " + quantity * 1.11); //Euro --> Dolar
                 }
                 if (currency == 3) {
-                    document.writeln("Cantidad en £: " + quantity * 0.88);
+                    document.writeln("Cantidad en £: " + quantity * 0.84); //Euro --> Libra
                 }
-            break;
+                break;
             case 3:
                 if (currency == 1) {
-                    document.writeln("Cantidad en $: " + quantity * 1.24);
+                    document.writeln("Cantidad en $: " + quantity * 1.32); //Libra --> Dolar
                 }
                 if (currency == 2) {
-                    document.writeln("Cantidad en €: " + quantity * 1.13);
+                    document.writeln("Cantidad en €: " +  quantity * 1.19); //Libra --> Euro
                 }
-            break;
+                break;
 
             default:
                 break;
         }
 
-    break;
+        break;
     case 10:
         /**
          * Mostrar todos los números existentes en un rango A .. B, donde A y B son valores pedidos al
@@ -232,24 +232,34 @@ switch (parseInt(option)) {
 
         switch (option) {
             case true:
+                if (rangeA > rangeB) {
+                    var tmp = rangeA;
+                    rangeA = rangeB;
+                    rangeB = tmp;
+                }        
                 for (rangeA; rangeA < rangeB + 1; rangeA++) {
                     arrayNum[pos] = rangeA;
                     pos++;
                 }
                 document.writeln(arrayNum);
-            break;
+                break;
             case false:
-                for (rangeB; rangeB > rangeA - 1; rangeB--) {
-                    arrayNum[pos] = rangeB;
+                if (rangeB > rangeA) {
+                    var tmp = rangeB;
+                    rangeB = rangeA;
+                    rangeA = tmp;
+                }        
+                for (rangeA; rangeA > rangeB - 1; rangeA--) {
+                    arrayNum[pos] = rangeA;
                     pos++;
                 }
                 document.writeln(arrayNum);
-            break;
+                break;
             default:
                 break;
         }
 
-    break;
+        break;
     case 11:
         /**
          * Mostrar todos los múltiplos de 5 entre 50 y 100.
@@ -267,7 +277,7 @@ switch (parseInt(option)) {
 
         document.writeln("1," + arrayNum);
 
-    break;
+        break;
     case 12:
         /**
          * Mostrar todos los múltiplos de X entre A y B. Pedir X, A y B al usuario.
@@ -288,7 +298,7 @@ switch (parseInt(option)) {
 
         document.writeln("1," + arrayNum);
 
-    break;
+        break;
     default:
         break;
 }
