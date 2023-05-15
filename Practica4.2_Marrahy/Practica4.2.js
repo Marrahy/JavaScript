@@ -1,15 +1,57 @@
+
+function ejercicio1(){
+
+
+    function Persona(nombre, apellido, edad) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.hermano = new Array[3];
+        this.set_padre(persona) = function() {
+            return this.padre = persona;
+        }
+        this.set_madre = function() {
+            return this.nombre + " " + this.apellido + " " + this.edad + ".";
+        }
+        this.add_hermanos = function(hermano) {
+            return this.hermano.push(hermano);
+        }
+        }
+
+        const ned = new Persona("Ned", "Stark", 60);
+        
+        const cat = new Persona("Catelyn", "Stark", 55);
+        
+        const rob = new Persona("Rob", "Stark", 55);
+
+        rob.set_padre(ned);
+        rob.set_madre(cat);
+        rob.add_hermanos(sansa);
+
+
+        function add_hermana() {
+            const hermano = new Persona("Rob", "Stark", 30)
+            const hermano2 = new Persona("Jon", "Stark", 30)
+            const hermana = new Persona("Sansa", "Stark", 30)    
+        }
+    }
+
+}
+
 var option = prompt("Introduce número del ejercicio: ");
 switch (parseInt(option)) {
     /*
      * Crea un objeto persona que tendrá las propiedades: nombre, apellidos, edad. También las
-     * propiedades tipo persona: padre, madre y hermanos. Crea os métodos set_padre(),
+     * propiedades tipo persona: padre, madre y hermanos. Crea los métodos set_padre(),
      * set_madre, y add_hermano(). Luego crea la familia Stark, con Ned Stark y Catelyn Tully, y
      * al menos los tres hermanos Rob, Jon y Sansa. Por último recorre todos los hermanos de uno
      * de ellos y saca el nombre de sus hermanos.
     */
     case 1:
+        ejercicio1();
+        break;
+
         
-    break;
     /*
      * Haz una página que solicite al usuario una función con variables "x" e "y",y una serie de
      * valores separados por ";" y que cree automáticamente una tabla (<table>) con el resultado de
