@@ -1,74 +1,139 @@
 body {
-    background-image: url("anime_background.png");
+    background-image: url("mylivewallpapers.com-Samurai-Doge.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Hiragino Kaku Gothic Pro;
 }
 /*Titulo*/
 .title {
-    color: whitesmoke;
-    font-family: KaiTi;
     margin: auto;
-    margin-left: 775px;
-    font-size: xx-large;
-    text-decoration: underline;
-    font-weight: bolder;
+    margin-left: 45%;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 180px;
 }
-/*Contenedor de la pagina*/
-.container {
-    position: relative;
-}
-/*Modulo de los datos del anime*/
-.main_title {
+/*Modulo del titulo del anime*/
+.anime-title-cluster {
     position: absolute;
     margin-left: 10%;
-    border: 3px solid #74ddf7;
+    margin-top: 1%;
+    padding: 10px;
+    border: 3px solid rgba(116,221,247, 0.6);
+    width: 575px;
+    height: 90px;
+    background: linear-gradient(rgba(255, 94, 113, 75%), rgba(78, 86, 82, 1));
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: transform 0.1s ease;
+}
+.anime-title-cluster:hover {
+    transform: scale(1.05);
+}
+.text-title {
+    color: #e6e5e3;
+    margin: auto;
+    font-size: larger;
+}
+.text-titles {
+    color: #e6e5e3;
+    font-weight: bolder;
+}
+/*Modulo de los datos del anime*/
+.main-title {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 8%;
+    border: 3px solid rgba(116,221,247, 0.6);
     border-radius: 10%;
     width: 600px;
-    height: 450px;
-    background: linear-gradient(#7A69D6, 75%, pink);
+    height: 350px;
+    background: linear-gradient(rgba(255, 94, 113, 75%), rgba(78, 86, 82, 1));
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: transform 0.1s ease;
 }
-.text_main_tittle {
+.main-title:hover {
+    transform: scale(1.05);
+}
+.text-main-title {
     margin: auto;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-left: 15px;
-    color: whitesmoke;
+    color: #e6e5e3;
     font-weight: bold;
+    font-size: medium;
 }
 /*Modulo imagen del anime*/
-.anime_image {
+.anime-image {
     position: absolute;
-    margin-left: 60%;
+    margin-top: 1%;
+    margin-left: 67%;
+    transition: transform 0.1s ease;
+}
+.anime-image:hover {
+    transform: scale(1.25);
+}
+img {
     border: 3px solid #74ddf7;
-    border-radius: 7%;
-    width: 300px;
-    height: 450px;
-    background: linear-gradient(#7A69D6, 75%, pink);
+    border-radius: 15%;
 }
 /*Modulo de la sinopsis*/
 .synopsis {
     position: absolute;
-    margin-top: 26%;
+    margin-top: 28.5%;
     margin-left: 10%;
-    border: 3px solid #74ddf7;
+    border: 3px solid rgba(116,221,247, 0.6);
     border-radius: 10%;
     width: 600px;
-    height: 250px;
-    background: linear-gradient(#7A69D6, 75%, pink);
+    height: 225px;
+    background: linear-gradient(rgba(255, 94, 113, 75%), rgba(78, 86, 82, 1));
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: transform 0.1s ease;
+    line-height: 1.2;
 }
-.text_synopsis {
+.synopsis:hover {
+    transform: scale(1.05);
+}
+.synopsis-title {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 250px;
+    color: #e6e5e3;
+    font-weight: bold;
+}
+.text-synopsis {
     margin: auto;
     margin-top: 15px;
     margin-left: 15px;
-    color: whitesmoke;
-    font-weight: bold;
+    color: #e6e5e3;
+    font-size: large;
 }
-.cluster_video {
+.cluster-video {
     position: absolute;
-    margin-top: 26%;
     margin-left: 60%;
+    margin-top: 20%;
+}
+.gif {
+    background-image: url("gon_kilua.gif");
+    margin-top: 12.25%;
+    margin-left: 80%;
+    width: 380px;
+    height: 150px;
+    background-repeat: no-repeat;
+}
+li {
+    margin-bottom: 10px;
+}
+video {
     border: 3px solid #74ddf7;
     border-radius: 10%;
-    width: 600px;
-    height: 275px;
-    background: linear-gradient(#7A69D6, 75%, pink);
+}
+iframe {
+    color: #e6e5e3;
+    background: linear-gradient(rgba(255, 94, 113, 75%), rgba(78, 86, 82, 1));
 }

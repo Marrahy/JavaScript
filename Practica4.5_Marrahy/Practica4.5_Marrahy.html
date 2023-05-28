@@ -5,44 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Practica4.5_Marrahy.css">
-
-    <title>My Anime List</title>
-
-    <div class="title">
-        <h3>My Anime Lists</h3>
-    </div>
-
-    <div class="container">
-        <div class="main_title">
-            <div class="text_main_tittle">
-                <p>Titulo: </p>
-                <p>Tipo de manga: </p>
-                <p>Fuente: </p>
-                <p>Episodios: </p>
-                <p>Comienzo emisión: pon la fecha de comienzo de emisión en formato dia/mes/año.</p>
-                <p>Fin emisión: pon la fecha de fin de emisión en formato dia/mes/año.</p>
-                <p>Duración: </p>
-                <p>Clasificación: </p>
-                <p>Nota: </p>
-                <p>Géneros: pon una lista de géneros en una solo línea.</p>
-            </div>
-        </div>
-        <div class="anime_image">
-            <img id="image">
-        </div>    
-        <div class="synopsis">
-            <div class="text_synopsis">
-                <p>
-                    Sinopsis
-                </p>
-            </div>
-        </div>
-        <div class="cluster_video">
-            <video src=""></video>
-        </div>
-    </div>
 </head>
     <body>
-        
+        <title>My Anime List</title>
+
+        <div class="title">
+        </div>
+    <div class="border-animated">
+        <div class="anime-title-cluster">
+            <h4 class="text-title" id="text-title"></h4> <!--Titulo anime-->
+            <ul class="text-titles">  <!--Titulo en otros idiomas-->
+                <li id="type-default"></li>  <!--Por defecto-->
+                <li id="type-japanese"></li>  <!--Japones-->
+            </ul>
+        </div>
+    
+        <div class="main-title">
+            <div class="text-main-title">
+                <h3>Información adicional</h3>
+                <ul>
+                    <li id="manga-type">Tipo de manga: </li>
+                    <li id="manga-font">Fuente: </li>
+                    <li id="episodes">Episodios: </li>
+                    <li id="emision-start-date">Comienzo emisión: </li>
+                    <li id="emision-end-date">Fin emisión: </li>
+                    <li id="duration">Duración: </li>
+                    <li id="clasification">Clasificación: </li>
+                    <li id="score">Nota: </li>
+                    <li id="genres">Géneros: </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="anime-image">
+            <img id="image">
+        </div>   
+    
+        <div class="synopsis">
+            <div class="text-synopsis"> <!--Modulo de la siponsis del anime-->
+                <h3 class="synopsis-title">
+                    Sinopsis
+                </h3>
+                <p class="text-synopsis" id="synopsis"></p> <!--Sinopsis del anime-->
+            </div>
+        </div>
+    
+        <div class="cluster-video">
+            <iframe id="video-url" width="680" height="280"></iframe>
+        </div>
+    </div>
+    <div class="gif">
+        <a href="https://www3.animeflv.net/anime/hunter-x-hunter" target="_blank">
+        </a>
+    </div>
+        <script src="Practica4.5_Marrahy.js"></script>
     </body>
 </html>
